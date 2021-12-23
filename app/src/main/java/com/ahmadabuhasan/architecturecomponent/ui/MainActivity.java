@@ -1,8 +1,10 @@
-package com.ahmadabuhasan.architecturecomponent;
+package com.ahmadabuhasan.architecturecomponent.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.ahmadabuhasan.architecturecomponent.R;
 
 public class MainActivity extends AppCompatActivity {
 
