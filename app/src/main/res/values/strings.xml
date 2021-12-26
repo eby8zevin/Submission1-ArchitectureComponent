@@ -2,4 +2,6 @@
     <string name="app_name">Movie Catalogue</string>
 
     <string name="poster">Poster</string>
+    <string name="tittle">Tittle</string>
+    <string name="release">Release</string>
 </resources>
