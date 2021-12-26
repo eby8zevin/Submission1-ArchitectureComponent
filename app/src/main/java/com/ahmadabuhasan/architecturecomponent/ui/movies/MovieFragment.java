@@ -17,6 +17,10 @@ public class MovieFragment extends Fragment {
 
     FragmentMoviesBinding binding;
 
+    public MovieFragment(){
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
