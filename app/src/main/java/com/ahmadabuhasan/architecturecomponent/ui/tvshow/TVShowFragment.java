@@ -13,9 +13,11 @@ import com.ahmadabuhasan.architecturecomponent.databinding.FragmentTvShowBinding
 
 public class TVShowFragment extends Fragment {
 
-    public static final String ARG_SECTION_NUMBER = "section_number";
-
     FragmentTvShowBinding binding;
+
+    public TVShowFragment() {
+
+    }
 
     @Nullable
     @Override
