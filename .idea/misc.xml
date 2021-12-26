@@ -6,7 +6,8 @@
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/fragment_movies.xml" value="0.11236338797814208" />
-        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/item_movie.xml" value="0.11236338797814208" />
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/fragment_tv_show.xml" value="0.11236338797814208" />
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/item_movie.xml" value="0.14" />
       </map>
     </option>
   </component>
