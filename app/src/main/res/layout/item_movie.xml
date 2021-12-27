@@ -40,7 +40,7 @@
             android:text="@string/tittle"
             android:textColor="@color/black"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/release"
+            app:layout_constraintBottom_toTopOf="@+id/tv_release"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/iv_poster"
@@ -48,7 +48,7 @@
             app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
-            android:id="@id/release"
+            android:id="@id/tv_release"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
