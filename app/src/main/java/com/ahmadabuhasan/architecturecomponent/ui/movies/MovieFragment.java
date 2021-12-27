@@ -13,8 +13,6 @@ import com.ahmadabuhasan.architecturecomponent.databinding.FragmentMoviesBinding
 
 public class MovieFragment extends Fragment {
 
-    public static final String ARG_SECTION_NUMBER = "section_number";
-
     FragmentMoviesBinding binding;
 
     public MovieFragment(){
