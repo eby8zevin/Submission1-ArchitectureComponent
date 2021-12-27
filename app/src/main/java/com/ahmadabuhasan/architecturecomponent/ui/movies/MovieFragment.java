@@ -15,7 +15,7 @@ public class MovieFragment extends Fragment {
 
     FragmentMoviesBinding binding;
 
-    public MovieFragment(){
+    public MovieFragment() {
 
     }
 
@@ -29,5 +29,9 @@ public class MovieFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        MovieAdapter adapter = new MovieAdapter();
+        binding.rvMovies.setAdapter(adapter);
+        binding.rvMovies.setHasFixedSize(true);
     }
 }
