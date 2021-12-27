@@ -1,14 +1,14 @@
 package com.ahmadabuhasan.architecturecomponent.ui;
 
-import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.ahmadabuhasan.architecturecomponent.ui.movies.MovieFragment;
+import com.ahmadabuhasan.architecturecomponent.ui.tvshow.TVShowFragment;
+
+import java.util.Objects;
 
 public class MainPagerAdapter extends FragmentStateAdapter {
 
@@ -19,11 +19,16 @@ public class MainPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        MovieFragment movieFragment = new MovieFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(MovieFragment.ARG_SECTION_NUMBER, position + 1);
-        movieFragment.setArguments(bundle);
-        return movieFragment;
+        Fragment fragment = null;
+        switch (position) {
+            case 0:
+                fragment = new MovieFragment();
+                break;
+            case 1:
+                fragment= new TVShowFragment();
+                break;
+        }
+        return Objects.requireNonNull(fragment);
     }
 
     @Override
