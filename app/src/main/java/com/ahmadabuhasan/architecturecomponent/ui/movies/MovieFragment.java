@@ -8,16 +8,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.ahmadabuhasan.architecturecomponent.data.MovieEntity;
 import com.ahmadabuhasan.architecturecomponent.databinding.FragmentMoviesBinding;
+
+import java.util.List;
 
 public class MovieFragment extends Fragment {
 
-    FragmentMoviesBinding binding;
-
-    public MovieFragment() {
-
-    }
+    private FragmentMoviesBinding binding;
 
     @Nullable
     @Override
@@ -30,8 +31,16 @@ public class MovieFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        MovieAdapter adapter = new MovieAdapter();
-        binding.rvMovies.setAdapter(adapter);
-        binding.rvMovies.setHasFixedSize(true);
+        if (getActivity() != null) {
+            MovieViewModel movieViewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(MovieViewModel.class);
+            List<MovieEntity> movies = movieViewModel.getMovies();
+
+            MovieAdapter movieAdapter = new MovieAdapter();
+            movieAdapter.setMovie(movies);
+
+            binding.rvMovies.setLayoutManager(new LinearLayoutManager(getContext()));
+            binding.rvMovies.setHasFixedSize(true);
+            binding.rvMovies.setAdapter(movieAdapter);
+        }
     }
 }
