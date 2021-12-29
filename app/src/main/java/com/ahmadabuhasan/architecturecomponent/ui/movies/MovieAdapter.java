@@ -9,18 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ahmadabuhasan.architecturecomponent.data.MovieEntity;
 import com.ahmadabuhasan.architecturecomponent.databinding.ItemMovieBinding;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
 
-    private final ArrayList<MovieEntity> movieEntityArrayList = new ArrayList<>();
+    private final List<MovieEntity> listMovie = new ArrayList<>();
 
-    public void setMovieEntityArrayList(ArrayList<MovieEntity> data){
-        movieEntityArrayList.clear();
-        movieEntityArrayList.addAll(data);
-        notifyDataSetChanged();
+    void setMovie(List<MovieEntity> listMovie) {
+        if (listMovie == null) return;
+        this.listMovie.clear();
+        this.listMovie.addAll(listMovie);
     }
 
     @NonNull
@@ -32,10 +32,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public void onBindViewHolder(@NonNull MovieAdapter.MovieViewHolder holder, int position) {
-        MovieEntity movieEntity = movieEntityArrayList.get(position);
+        MovieEntity movieEntity = listMovie.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(movieEntity.getPoster())
-                .apply(new RequestOptions().override(120, 80))
                 .into(holder.binding.ivPoster);
         holder.binding.tvTitle.setText(movieEntity.getTitle());
         holder.binding.tvRelease.setText(movieEntity.getRelease());
@@ -43,7 +42,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public int getItemCount() {
-        return movieEntityArrayList.size();
+        return listMovie.size();
     }
 
     public static class MovieViewHolder extends RecyclerView.ViewHolder {
