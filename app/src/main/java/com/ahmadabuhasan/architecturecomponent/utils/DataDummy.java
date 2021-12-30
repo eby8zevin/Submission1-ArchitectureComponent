@@ -179,13 +179,13 @@ public class DataDummy {
         ));
 
         tvshow.add(new TVShowEntity(
-                "TVShow 2",
-                "",
-                "",
-                "",
-                "",
-                "",
-                R.drawable.poster_family_guy
+                "TVShow 7",
+                "Riverdale (2017)",
+                "Januari 26, 2017",
+                "Misteri, Drama, Kejahatan",
+                "45m",
+                "Ditetapkan di masa sekarang, seri ini menawarkan pandangan subversif yang berani pada Archie, Betty, Veronica dan teman-teman mereka, menjelajahi surealitas kehidupan kota kecil, kegelapan dan keanehan yang menggelegak di bawah fasad Riverdale yang sehat",
+                R.drawable.poster_riverdale
         ));
 
         tvshow.add(new TVShowEntity(
