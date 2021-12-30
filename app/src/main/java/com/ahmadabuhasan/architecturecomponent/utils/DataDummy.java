@@ -150,12 +150,12 @@ public class DataDummy {
 
         tvshow.add(new TVShowEntity(
                 "TVShow 4",
-                "",
-                "",
-                "",
-                "",
-                "",
-                R.drawable.poster_family_guy
+                "Gotham (2014)",
+                "September 22, 2014",
+                "Drama, Kejahatan, Sci-fi & Fantasy",
+                "43m",
+                "Semua orang tahu nama Komisaris Gordon. Dia adalah salah satu musuh terbesar dunia kejahatan, seorang pria yang reputasinya identik dengan hukum dan ketertiban. Tapi apa yang diketahui tentang kisah Gordon dan kenaikannya dari detektif pemula ke Komisaris Polisi? Apa yang diperlukan untuk menavigasi berbagai lapisan korupsi yang diam-diam memerintah Kota Gotham, tempat bertelurnya penjahat paling ikonik di dunia? Dan keadaan apa yang menciptakan mereka - persona yang lebih besar dari kehidupan yang akan menjadi Catwoman, The Penguin, The Riddler, Two-Face dan The Joker?",
+                R.drawable.poster_gotham
         ));
 
         tvshow.add(new TVShowEntity(
