@@ -209,12 +209,12 @@ public class DataDummy {
         ));
 
         tvshow.add(new TVShowEntity(
-                "TVShow 2",
-                "",
-                "",
-                "",
-                "",
-                "",
+                "TVShow 10",
+                "Simpsons (1989)",
+                "Desember 17, 1989",
+                "Keluarga, Animasi, Komedi",
+                "22m",
+                "Bertempat di Springfield, kota rata-rata di Amerika, pertunjukan ini berfokus pada kejenakaan dan petualangan sehari-hari keluarga Simpson; Homer, Marge, Bart, Lisa dan Maggie, serta ribuan pemain virtual. Sejak awal, serial ini telah menjadi ikon budaya pop, menarik ratusan selebriti menjadi bintang tamu. Acara ini juga menjadi terkenal karena satirnya yang tak kenal takut terhadap kehidupan politik, media, dan Amerika secara umum.",
                 R.drawable.poster_family_guy
         ));
         return tvshow;
