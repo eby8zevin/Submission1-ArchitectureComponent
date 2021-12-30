@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.ahmadabuhasan.architecturecomponent.ui.movies.MovieFragment;
-import com.ahmadabuhasan.architecturecomponent.ui.tvshow.TVShowFragment;
+import com.ahmadabuhasan.architecturecomponent.ui.tvshows.TVShowFragment;
 
 import java.util.Objects;
 
