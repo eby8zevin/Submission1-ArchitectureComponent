@@ -199,13 +199,13 @@ public class DataDummy {
         ));
 
         tvshow.add(new TVShowEntity(
-                "TVShow 2",
-                "",
-                "",
-                "",
-                "",
-                "",
-                R.drawable.poster_family_guy
+                "TVShow 9",
+                "Supergirl (2015)",
+                "Oktober 26, 2015",
+                "Drama, Sci-fi & Fantasy, Aksi & Petualangan",
+                "42m",
+                "Twenty-four-year-old Kara Zor-El, who was taken in by the Danvers family when she was 13 after being sent away from Krypton, must learn to embrace her powers after previously hiding them. The Danvers teach her to be careful with her powers, until she has to reveal them during an unexpected disaster, setting her on her journey of heroism.",
+                R.drawable.poster_supergirl
         ));
 
         tvshow.add(new TVShowEntity(
