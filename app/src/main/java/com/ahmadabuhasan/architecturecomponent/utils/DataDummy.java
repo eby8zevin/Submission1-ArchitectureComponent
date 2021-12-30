@@ -159,13 +159,13 @@ public class DataDummy {
         ));
 
         tvshow.add(new TVShowEntity(
-                "TVShow 2",
-                "",
-                "",
-                "",
-                "",
-                "",
-                R.drawable.poster_family_guy
+                "TVShow 5",
+                "Naruto Shippuden (2007)",
+                "Februari 15, 2007",
+                "Animasi, Aksi & Petualangan, Sci-fi & Fantasy",
+                "25m",
+                "Naruto Shippuuden adalah kelanjutan dari serial TV animasi asli Naruto. Kisah ini berkisah tentang Uzumaki Naruto yang lebih tua dan sedikit lebih matang dan upayanya untuk menyelamatkan temannya Uchiha Sasuke dari cengkeraman Shinobi seperti ular, Orochimaru. Setelah 2 setengah tahun, Naruto akhirnya kembali ke desanya Konoha, dan mulai mewujudkan ambisinya, meskipun itu tidak akan mudah, karena Ia telah mengumpulkan beberapa musuh (lebih berbahaya), seperti organisasi shinobi. ; Akatsuki.",
+                R.drawable.poster_naruto_shipudden
         ));
 
         tvshow.add(new TVShowEntity(
