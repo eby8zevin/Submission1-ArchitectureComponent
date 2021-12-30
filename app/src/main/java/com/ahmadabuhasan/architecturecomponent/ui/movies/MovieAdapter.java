@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ahmadabuhasan.architecturecomponent.data.MovieEntity;
-import com.ahmadabuhasan.architecturecomponent.databinding.ItemMovieBinding;
+import com.ahmadabuhasan.architecturecomponent.databinding.ItemListBinding;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     @NonNull
     @Override
     public MovieAdapter.MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemMovieBinding binding = ItemMovieBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        ItemListBinding binding = ItemListBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new MovieViewHolder(binding);
     }
 
@@ -47,9 +47,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     public static class MovieViewHolder extends RecyclerView.ViewHolder {
 
-        private final ItemMovieBinding binding;
+        private final ItemListBinding binding;
 
-        public MovieViewHolder(@NonNull ItemMovieBinding binding) {
+        public MovieViewHolder(@NonNull ItemListBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
