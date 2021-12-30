@@ -2,6 +2,7 @@ package com.ahmadabuhasan.architecturecomponent.utils;
 
 import com.ahmadabuhasan.architecturecomponent.R;
 import com.ahmadabuhasan.architecturecomponent.data.MovieEntity;
+import com.ahmadabuhasan.architecturecomponent.data.TVShowEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -112,5 +113,20 @@ public class DataDummy {
                 R.drawable.poster_spiderman
         ));
         return movie;
+    }
+
+    public static List<TVShowEntity> generateDummyTVShow() {
+        ArrayList<TVShowEntity> tvshow = new ArrayList<>();
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 1",
+                "Doom Patrol (2019)",
+                "Februari 15, 2019",
+                "Sci-fi & Fantasy, Drama",
+                "49m",
+                "The Doom Patrol’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find.",
+                R.drawable.poster_doom_patrol
+        ));
+        return tvshow;
     }
 }
