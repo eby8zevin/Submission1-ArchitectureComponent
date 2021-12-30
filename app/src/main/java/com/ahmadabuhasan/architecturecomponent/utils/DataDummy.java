@@ -169,13 +169,13 @@ public class DataDummy {
         ));
 
         tvshow.add(new TVShowEntity(
-                "TVShow 2",
-                "",
-                "",
-                "",
-                "",
-                "",
-                R.drawable.poster_family_guy
+                "TVShow 6",
+                "NCIS (2003)",
+                "NCIS (2003)",
+                "Kejahatan, Aksi & Petualangan, Drama",
+                "45m",
+                "From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.",
+                R.drawable.poster_ncis
         ));
 
         tvshow.add(new TVShowEntity(
