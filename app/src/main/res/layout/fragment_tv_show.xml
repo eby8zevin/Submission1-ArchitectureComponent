@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.tvshow.TVShowFragment">
+    tools:context=".ui.tvshows.TVShowFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_tv_show"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_movie" />
+        tools:listitem="@layout/item_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
