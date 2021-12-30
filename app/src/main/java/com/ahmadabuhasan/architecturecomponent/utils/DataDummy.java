@@ -127,6 +127,96 @@ public class DataDummy {
                 "The Doom Patrol’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find.",
                 R.drawable.poster_doom_patrol
         ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 2",
+                "Family Guy (1999)",
+                "Januari 31, 1999",
+                "Animasi, Komedi",
+                "22m",
+                "Seri animasi animasi Freakin 'Sweet yang sakit, terpelintir, dan salah, menampilkan petualangan keluarga Griffin yang disfungsional. Peter yang kikuk dan Lois yang sudah lama menderita memiliki tiga anak. Stewie (bayi yang brilian tetapi sadis yang bertekad membunuh ibunya dan mengambil alih dunia), Meg (yang tertua, dan merupakan gadis yang paling tidak populer di kota) dan Chris (anak tengah, dia tidak terlalu cerdas tetapi memiliki hasrat untuk film ). Anggota terakhir keluarga itu adalah Brian - anjing yang bisa bicara dan lebih dari sekadar hewan peliharaan, ia menjaga Stewie, sementara menghirup Martinis dan memilah-milah masalah hidupnya sendiri.",
+                R.drawable.poster_family_guy
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 3",
+                "The Flash (2014)",
+                "Oktober 7, 2014",
+                "Drama, Sci-fi & Fantasy",
+                "44m",
+                "Setelah akselerator partikel menyebabkan badai aneh, Penyelidik CSI Barry Allen disambar petir dan jatuh koma. Beberapa bulan kemudian dia terbangun dengan kekuatan kecepatan super, memberinya kemampuan untuk bergerak melalui Central City seperti malaikat penjaga yang tak terlihat. Meskipun awalnya senang dengan kekuatan barunya, Barry terkejut menemukan bahwa dia bukan satu-satunya \"manusia meta\" yang diciptakan setelah ledakan akselerator - dan tidak semua orang menggunakan kekuatan baru mereka untuk kebaikan. Barry bermitra dengan S.T.A.R. Lab dan mendedikasikan hidupnya untuk melindungi yang tidak bersalah. Untuk saat ini, hanya beberapa teman dekat dan rekan yang tahu bahwa Barry secara harfiah adalah manusia tercepat, tetapi tidak lama sebelum dunia mengetahui apa yang menjadi Barry Allen ... The Flash.",
+                R.drawable.poster_flash
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 4",
+                "",
+                "",
+                "",
+                "",
+                "",
+                R.drawable.poster_family_guy
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 2",
+                "",
+                "",
+                "",
+                "",
+                "",
+                R.drawable.poster_family_guy
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 2",
+                "",
+                "",
+                "",
+                "",
+                "",
+                R.drawable.poster_family_guy
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 2",
+                "",
+                "",
+                "",
+                "",
+                "",
+                R.drawable.poster_family_guy
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 2",
+                "",
+                "",
+                "",
+                "",
+                "",
+                R.drawable.poster_family_guy
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 2",
+                "",
+                "",
+                "",
+                "",
+                "",
+                R.drawable.poster_family_guy
+        ));
+
+        tvshow.add(new TVShowEntity(
+                "TVShow 2",
+                "",
+                "",
+                "",
+                "",
+                "",
+                R.drawable.poster_family_guy
+        ));
         return tvshow;
     }
 }
