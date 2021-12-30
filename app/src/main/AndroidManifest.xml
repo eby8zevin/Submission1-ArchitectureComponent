@@ -10,6 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ArchitectureComponent">
+        <activity android:name=".ui.tvshows.TVShowDetail" />
+        <activity android:name=".ui.movies.MovieDetail" />
         <activity android:name=".ui.MainActivity" />
         <activity
             android:name=".SplashScreen"
