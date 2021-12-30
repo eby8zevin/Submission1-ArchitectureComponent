@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/drawable/ic_broken_image.xml" value="0.15902777777777777" />
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/drawable/ic_error.xml" value="0.15902777777777777" />
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/drawable/ic_loading.xml" value="0.15902777777777777" />
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/drawable/ic_refresh.xml" value="0.15902777777777777" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/drawable/tab_bg_select.xml" value="0.165234375" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/drawable/tab_layout_select.xml" value="0.165234375" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/activity_movie_detail.xml" value="0.1" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/activity_tvshow_detail.xml" value="0.1" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/fragment_movies.xml" value="0.11236338797814208" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/fragment_tv_show.xml" value="0.11236338797814208" />
         <entry key="..\:/Android Studio/ArchitectureComponent/app/src/main/res/layout/item_list.xml" value="0.1" />
