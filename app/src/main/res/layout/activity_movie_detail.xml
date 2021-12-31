@@ -22,7 +22,7 @@
             app:contentScrim="?colorPrimary"
             app:expandedTitleMarginBottom="94dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="Title">
+            app:title="@string/tittle">
 
             <ImageView
                 android:id="@+id/iv_detail"
@@ -63,7 +63,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/card_detail"
+                android:id="@+id/cv_detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -79,11 +79,11 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/tv_detail_genre_duration"
+                        android:id="@+id/tv_genre_duration"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="genre_duration"
+                        android:text="@string/genre_duration"
                         android:textColor="@android:color/primary_text_dark"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -92,20 +92,20 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tv_detail_overview_title"
+                        android:id="@+id/tv_overview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:gravity="center_vertical"
                         android:minHeight="32dp"
-                        android:text="overview"
+                        android:text="@string/overview"
                         android:textAllCaps="true"
                         android:textColor="@android:color/primary_text_dark"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_genre_duration" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_genre_duration" />
 
                     <TextView
                         android:id="@+id/tv_detail_overview"
@@ -113,10 +113,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:lineSpacingExtra="4dp"
-                        android:text="overview_detail"
+                        android:text="@string/overview_detail"
                         android:textColor="@android:color/secondary_text_dark"
                         android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_detail_overview_title" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_overview" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
