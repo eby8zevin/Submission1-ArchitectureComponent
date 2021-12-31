@@ -1,11 +1,18 @@
 package com.ahmadabuhasan.architecturecomponent.ui.tvshows;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.ahmadabuhasan.architecturecomponent.R;
+import com.ahmadabuhasan.architecturecomponent.data.TVShowEntity;
 import com.ahmadabuhasan.architecturecomponent.databinding.ActivityTvshowDetailBinding;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
+
+import java.util.Objects;
 
 public class TVShowDetail extends AppCompatActivity {
 
@@ -16,6 +23,36 @@ public class TVShowDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tvshow_detail);
+        //setContentView(R.layout.activity_tvshow_detail);
+
+        binding = ActivityTvshowDetailBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
+        TVShowDetailViewModel viewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(TVShowDetailViewModel.class);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String tvshowId = extras.getString(EXTRA_TVSHOW);
+            if (tvshowId != null) {
+                viewModel.setSelectedTVShow(tvshowId);
+                populateTVShow(viewModel.getTVShow());
+            }
+        }
+
+        binding.toolbar.setNavigationOnClickListener(view -> onBackPressed());
+    }
+
+    private void populateTVShow(TVShowEntity tvShowEntity) {
+        binding.collapsing.setTitle(tvShowEntity.getTitle());
+        binding.tvGenreDuration.setText(String.format("%s  •  %s", tvShowEntity.getGenre(), tvShowEntity.getDuration()));
+        binding.tvDetailOverview.setText(tvShowEntity.getOverview());
+
+        Glide.with(this)
+                .load(tvShowEntity.getPoster())
+                .transform(new RoundedCorners(20))
+                .apply(RequestOptions.placeholderOf(R.drawable.ic_loading).error(R.drawable.ic_broken_image))
+                .into(binding.ivDetail);
     }
 }
