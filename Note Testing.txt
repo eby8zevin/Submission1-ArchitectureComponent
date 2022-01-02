@@ -1,0 +1,37 @@
+
+Skenario Codelab Unit Testing ViewModel:
+
+1. MovieViewModel:
+	- Load Movies:
+		- Memastikan data movie tidak null.
+		- Memastikan jumlah data movie sesuai dengan yang diharapkan.
+
+2. TVShowViewModel:
+	- Load TVShows:
+		- Memastikan data tvshow tidak null.
+		- Memastikan jumlah data tvshow sesuai dengan yang diharapkan.
+
+3. MovieDetailViewModel:
+	- Load Movies:
+		- Memastikan data movie tidak null.
+		- Memastikan data movie sesuai dengan yang diharapkan.
+
+4. TVShowDetailViewModel:
+	- Load TVShows:
+		- Memastikan data tvshow tidak null.
+		- Memastikan data tvshow sesuai dengan yang diharapkan.
+
+
+Skenario Codelab Instrumental Testing ViewModel:
+
+1. Menampilkan data movies
+	- Memastikan rv_movies dalam keadaan tampil.
+	- Gulir rv_movies ke posisi data terakhir.
+
+2. Menampilkan data tvshow
+	- Memastikan rv_tv_show dalam keadaan tampil.
+	- Gulir rv_tv_show ke posisi data terakhir.
+
+3. Menampilkan data detail movies
+	- Memberi tindakan klik pada data pertama di rv_movies.
+	- Memastikan Title Collapsing tampil sesuai dengan yang diharapkan.
