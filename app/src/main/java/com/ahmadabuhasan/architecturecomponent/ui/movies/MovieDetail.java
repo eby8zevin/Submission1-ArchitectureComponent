@@ -1,5 +1,6 @@
 package com.ahmadabuhasan.architecturecomponent.ui.movies;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,5 +55,16 @@ public class MovieDetail extends AppCompatActivity {
                 .transform(new RoundedCorners(20))
                 .apply(RequestOptions.placeholderOf(R.drawable.ic_loading).error(R.drawable.ic_broken_image))
                 .into(binding.ivDetail);
+
+        binding.ivShare.setOnClickListener(view -> {
+            String shareIntent = "Movie" +
+                    "\n Title: " + movieEntity.getTitle() +
+                    "\n Overview: " + movieEntity.getOverview();
+            Intent i = new Intent();
+            i.setAction(Intent.ACTION_SEND);
+            i.putExtra(Intent.EXTRA_TEXT, shareIntent);
+            i.setType("text/plain");
+            startActivity(Intent.createChooser(i, "Share"));
+        });
     }
 }
