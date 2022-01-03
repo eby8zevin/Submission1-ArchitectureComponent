@@ -46,7 +46,7 @@ public class TVShowDetail extends AppCompatActivity {
     }
 
     private void populateTVShow(TVShowEntity tvShowEntity) {
-        binding.collapsing.setTitle(tvShowEntity.getTitle());
+        binding.collapsingTvshow.setTitle(tvShowEntity.getTitle());
         binding.tvGenreDuration.setText(String.format("%s  •  %s", tvShowEntity.getGenre(), tvShowEntity.getDuration()));
         binding.tvDetailOverview.setText(tvShowEntity.getOverview());
 
