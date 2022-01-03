@@ -47,16 +47,16 @@ public class TVShowDetail extends AppCompatActivity {
 
     private void populateTVShow(TVShowEntity tvShowEntity) {
         binding.collapsingTvshow.setTitle(tvShowEntity.getTitle());
-        binding.tvGenreDuration.setText(String.format("%s  •  %s", tvShowEntity.getGenre(), tvShowEntity.getDuration()));
-        binding.tvDetailOverview.setText(tvShowEntity.getOverview());
+        binding.tvTvshowGenreDuration.setText(String.format("%s  •  %s", tvShowEntity.getGenre(), tvShowEntity.getDuration()));
+        binding.tvTvshowDetailOverview.setText(tvShowEntity.getOverview());
 
         Glide.with(this)
                 .load(tvShowEntity.getPoster())
                 .transform(new RoundedCorners(20))
                 .apply(RequestOptions.placeholderOf(R.drawable.ic_loading).error(R.drawable.ic_broken_image))
-                .into(binding.ivDetail);
+                .into(binding.ivTvshowPoster);
 
-        binding.ivShare.setOnClickListener(view -> {
+        binding.ivTvshowShare.setOnClickListener(view -> {
             String shareIntent = "TV Show" +
                     "\n Title: " + tvShowEntity.getTitle() +
                     "\n Overview: " + tvShowEntity.getOverview();
