@@ -9,20 +9,20 @@
     tools:ignore="RtlHardcoded">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/appbar_tvshow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing"
+            android:id="@+id/collapsing_tvshow"
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:textSize="34sp"
             app:contentScrim="?colorPrimary"
             app:expandedTitleMarginBottom="94dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="@string/tittle">
+            app:title="@string/title">
 
             <ImageView
                 android:id="@+id/iv_detail"
