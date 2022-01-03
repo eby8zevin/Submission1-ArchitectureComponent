@@ -9,23 +9,23 @@
     tools:ignore="RtlHardcoded">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/appbar_movie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing"
+            android:id="@+id/collapsing_movie"
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:textSize="34sp"
             app:contentScrim="?colorPrimary"
             app:expandedTitleMarginBottom="94dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="@string/tittle">
+            app:title="@string/title">
 
             <ImageView
-                android:id="@+id/iv_detail"
+                android:id="@+id/iv_movie_poster"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -47,7 +47,7 @@
                 app:navigationIcon="@drawable/abc_ic_ab_back_material">
 
                 <ImageView
-                    android:id="@+id/iv_share"
+                    android:id="@+id/iv_movie_share"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/tv_genre_duration"
+                        android:id="@+id/tv_movie_genre_duration"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -116,10 +116,10 @@
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_genre_duration" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_movie_genre_duration" />
 
                     <TextView
-                        android:id="@+id/tv_detail_overview"
+                        android:id="@+id/tv_movie_detail_overview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
