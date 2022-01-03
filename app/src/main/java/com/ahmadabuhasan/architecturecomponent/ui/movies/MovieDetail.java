@@ -46,17 +46,17 @@ public class MovieDetail extends AppCompatActivity {
     }
 
     private void populateMovie(MovieEntity movieEntity) {
-        binding.collapsing.setTitle(movieEntity.getTitle());
-        binding.tvGenreDuration.setText(String.format("%s  •  %s", movieEntity.getGenre(), movieEntity.getDuration()));
-        binding.tvDetailOverview.setText(movieEntity.getOverview());
+        binding.collapsingMovie.setTitle(movieEntity.getTitle());
+        binding.tvMovieGenreDuration.setText(String.format("%s  •  %s", movieEntity.getGenre(), movieEntity.getDuration()));
+        binding.tvMovieDetailOverview.setText(movieEntity.getOverview());
 
         Glide.with(this)
                 .load(movieEntity.getPoster())
                 .transform(new RoundedCorners(20))
                 .apply(RequestOptions.placeholderOf(R.drawable.ic_loading).error(R.drawable.ic_broken_image))
-                .into(binding.ivDetail);
+                .into(binding.ivMoviePoster);
 
-        binding.ivShare.setOnClickListener(view -> {
+        binding.ivMovieShare.setOnClickListener(view -> {
             String shareIntent = "Movie" +
                     "\n Title: " + movieEntity.getTitle() +
                     "\n Overview: " + movieEntity.getOverview();
