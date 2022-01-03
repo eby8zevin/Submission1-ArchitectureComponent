@@ -8,9 +8,7 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withTagValue;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.allOf;
 
 import androidx.test.espresso.contrib.RecyclerViewActions;
@@ -42,6 +40,14 @@ public class MainActivityTest {
     }
 
     @Test
+    public void loadTVShow() {
+        onView(withText("TV Show")).perform(click());
+        onView(withId(R.id.rv_tv_show)).check(matches(isDisplayed()));
+        onView(withId(R.id.rv_tv_show)).perform(RecyclerViewActions.scrollToPosition(dummyTVShow.size()));
+        onView(withId(R.id.rv_tv_show)).perform(RecyclerViewActions.actionOnItemAtPosition(9, scrollTo()));
+    }
+
+    @Test
     public void loadMovieDetail() {
         onView(withId(R.id.rv_movies)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
 
@@ -63,14 +69,40 @@ public class MainActivityTest {
         onView(withId(R.id.tv_movie_detail_overview)).check(matches(isDisplayed()));
         onView(withId(R.id.tv_movie_detail_overview)).check(matches(withText(dummyMovie.get(0).getOverview())));
 
+        // Scroll
         onView(withId(R.id.appbar_movie)).perform(click(), swipeUp());
+
+        // Share
+        onView(withId(R.id.iv_movie_share)).perform(click());
     }
 
     @Test
-    public void loadTVShow() {
+    public void loadTVShowDetail() {
         onView(withText("TV Show")).perform(click());
-        onView(withId(R.id.rv_tv_show)).check(matches(isDisplayed()));
-        onView(withId(R.id.rv_tv_show)).perform(RecyclerViewActions.scrollToPosition(dummyTVShow.size()));
-        onView(withId(R.id.rv_tv_show)).perform(RecyclerViewActions.actionOnItemAtPosition(9, scrollTo()));
+        onView(withId(R.id.rv_tv_show)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+
+        // Title
+        onView(allOf(withId(R.id.collapsing_tvshow)
+                , withText(dummyTVShow.get(0).getTitle())
+                , withContentDescription("Title")
+                , isDisplayed()));
+
+        // Poster
+        onView(withId(R.id.iv_tvshow_poster)).check(matches(isDisplayed()));
+
+        // Genre & Duration
+        onView(withId(R.id.tv_tvshow_genre_duration)).check(matches(isDisplayed()));
+        onView(withId(R.id.tv_tvshow_genre_duration)).check(matches(withText
+                (String.format("%s  •  %s", dummyTVShow.get(0).getGenre(), dummyTVShow.get(0).getDuration()))));
+
+        // Overview
+        onView(withId(R.id.tv_tvshow_detail_overview)).check(matches(isDisplayed()));
+        onView(withId(R.id.tv_tvshow_detail_overview)).check(matches(withText(dummyTVShow.get(0).getOverview())));
+
+        // Scroll
+        onView(withId(R.id.appbar_tvshow)).perform(click(), swipeUp());
+
+        // Share
+        onView(withId(R.id.iv_tvshow_share)).perform(click());
     }
 }
