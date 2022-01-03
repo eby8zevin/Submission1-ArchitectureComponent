@@ -3,11 +3,14 @@ package com.ahmadabuhasan.architecturecomponent.ui;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
+import static androidx.test.espresso.action.ViewActions.swipeUp;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withTagValue;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.allOf;
 
 import androidx.test.espresso.contrib.RecyclerViewActions;
@@ -41,8 +44,26 @@ public class MainActivityTest {
     @Test
     public void loadMovieDetail() {
         onView(withId(R.id.rv_movies)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
-        onView(allOf(withId(R.id.collapsing), withText(dummyMovie.get(0).getTitle())
-                , withContentDescription("Title"), isDisplayed()));
+
+        // Title
+        onView(allOf(withId(R.id.collapsing_movie)
+                , withText(dummyMovie.get(0).getTitle())
+                , withContentDescription("Title")
+                , isDisplayed()));
+
+        // Poster
+        onView(withId(R.id.iv_movie_poster)).check(matches(isDisplayed()));
+
+        // Genre & Duration
+        onView(withId(R.id.tv_movie_genre_duration)).check(matches(isDisplayed()));
+        onView(withId(R.id.tv_movie_genre_duration)).check(matches(withText
+                (String.format("%s  •  %s", dummyMovie.get(0).getGenre(), dummyMovie.get(0).getDuration()))));
+
+        // Overview
+        onView(withId(R.id.tv_movie_detail_overview)).check(matches(isDisplayed()));
+        onView(withId(R.id.tv_movie_detail_overview)).check(matches(withText(dummyMovie.get(0).getOverview())));
+
+        onView(withId(R.id.appbar_movie)).perform(click(), swipeUp());
     }
 
     @Test
