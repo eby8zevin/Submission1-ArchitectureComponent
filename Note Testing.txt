@@ -29,9 +29,24 @@ Skenario Codelab Instrumental Testing ViewModel:
 	- Gulir rv_movies ke posisi data terakhir.
 
 2. Menampilkan data tvshow
+    - Klik TabLayout dengan teks "TV Show"
 	- Memastikan rv_tv_show dalam keadaan tampil.
 	- Gulir rv_tv_show ke posisi data terakhir.
 
 3. Menampilkan data detail movies
 	- Memberi tindakan klik pada data pertama di rv_movies.
 	- Memastikan Title Collapsing tampil sesuai dengan yang diharapkan.
+	- Memastikan ImageView iv_movie_poster tampil sesuai yang diharapkan.
+	- Memastikan TextView tv_movie_genre_duration tampil sesuai yang diharapkan.
+	- Memastikan TextView tv_movie_detail_overview tampil sesuai yang diharapkan.
+	- Gulir ActivityMovieDetail ke bawah.
+	- Memberi tindakan klik pada iv_movie_share.
+
+4. Menampilkan data detail tvshow
+	- Memberi tindakan klik pada data pertama di rv_tv_show.
+	- Memastikan Title Collapsing tampil sesuai dengan yang diharapkan.
+	- Memastikan ImageView iv_tvshow_poster tampil sesuai yang diharapkan.
+	- Memastikan TextView tv_tvshow_genre_duration tampil sesuai yang diharapkan.
+	- Memastikan TextView tv_tvshow_detail_overview tampil sesuai yang diharapkan.
+	- Gulir ActivityTVShowDetail ke bawah.
+	- Memberi tindakan klik pada iv_tvshow_share.
