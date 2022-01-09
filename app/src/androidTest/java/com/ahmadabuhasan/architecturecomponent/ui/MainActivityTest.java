@@ -26,11 +26,11 @@ import java.util.List;
 
 public class MainActivityTest {
 
-    private List<MovieEntity> dummyMovie = DataDummy.generateDummyMovie();
-    private List<TVShowEntity> dummyTVShow = DataDummy.generateDummyTVShow();
+    private final List<MovieEntity> dummyMovie = DataDummy.generateDummyMovie();
+    private final List<TVShowEntity> dummyTVShow = DataDummy.generateDummyTVShow();
 
     @Rule
-    public ActivityScenarioRule activityRule = new ActivityScenarioRule<>(MainActivity.class);
+    public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule<>(MainActivity.class);
 
     @Test
     public void loadMovie() {
@@ -100,9 +100,11 @@ public class MainActivityTest {
         onView(withId(R.id.tv_tvshow_detail_overview)).check(matches(withText(dummyTVShow.get(0).getOverview())));
 
         // Scroll
+        onView(withId(R.id.appbar_tvshow)).check(matches(isDisplayed()));
         onView(withId(R.id.appbar_tvshow)).perform(click(), swipeUp());
 
         // Share
+        onView(withId(R.id.iv_tvshow_share)).check(matches(isDisplayed()));
         onView(withId(R.id.iv_tvshow_share)).perform(click());
     }
 }
