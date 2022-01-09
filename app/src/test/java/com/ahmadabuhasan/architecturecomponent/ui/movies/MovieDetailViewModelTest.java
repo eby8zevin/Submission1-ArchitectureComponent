@@ -12,8 +12,8 @@ import org.junit.Test;
 public class MovieDetailViewModelTest {
 
     private MovieDetailViewModel viewModel;
-    private MovieEntity dummyMovie = DataDummy.generateDummyMovie().get(0);
-    private String movieId = dummyMovie.getMovieId();
+    private final MovieEntity dummyMovie = DataDummy.generateDummyMovie().get(0);
+    private final String movieId = dummyMovie.getMovieId();
 
     @Before
     public void setUp() {
