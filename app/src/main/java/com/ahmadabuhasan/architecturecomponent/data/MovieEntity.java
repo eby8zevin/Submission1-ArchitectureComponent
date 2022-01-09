@@ -2,13 +2,13 @@ package com.ahmadabuhasan.architecturecomponent.data;
 
 public class MovieEntity {
 
-    private String movieId;
-    private String title;
-    private String release;
-    private String genre;
-    private String duration;
-    private String overview;
-    private Integer poster;
+    private final String movieId;
+    private final String title;
+    private final String release;
+    private final String genre;
+    private final String duration;
+    private final String overview;
+    private final Integer poster;
 
     public MovieEntity(String movieId, String title, String release, String genre, String duration, String overview, Integer poster) {
         this.movieId = movieId;
