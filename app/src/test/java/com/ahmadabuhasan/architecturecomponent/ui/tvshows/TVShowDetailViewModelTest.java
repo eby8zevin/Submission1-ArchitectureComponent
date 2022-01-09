@@ -12,8 +12,8 @@ import org.junit.Test;
 public class TVShowDetailViewModelTest {
 
     private TVShowDetailViewModel viewModel;
-    private TVShowEntity dummyTVShow = DataDummy.generateDummyTVShow().get(0);
-    private String tvshowId = dummyTVShow.getTvshowId();
+    private final TVShowEntity dummyTVShow = DataDummy.generateDummyTVShow().get(0);
+    private final String tvshowId = dummyTVShow.getTvshowId();
 
     @Before
     public void setUp() {
