@@ -24,7 +24,6 @@ public class TVShowDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_tvshow_detail);
 
         binding = ActivityTvshowDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
