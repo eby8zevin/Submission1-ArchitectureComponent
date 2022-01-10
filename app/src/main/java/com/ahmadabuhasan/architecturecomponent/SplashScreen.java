@@ -12,6 +12,7 @@ import com.ahmadabuhasan.architecturecomponent.ui.MainActivity;
 
 import java.util.Objects;
 
+//Penamaan sebuah activity sebaiknya diakhiri dengan kata Activity. SplashScreen seharusnya SplashScreenActivity.
 public class SplashScreen extends AppCompatActivity {
 
     @Override
